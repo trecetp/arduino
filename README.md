@@ -45,9 +45,12 @@ Luego poner en la terminar de GNU/Linux
 
 `echo "hello world" > /dev/ttyUSB0`
 
+## Sintaxis
+
+actualmente estan incluidas las sintaxis para emacs, gedit y vim, faltan para nano
+
 ## Nota
 
-- Faltan archivos par colorear textos en vim, nano, gedit, etc
 - El ejemplo esta pensado para el `atmega328` hay que cambiar la configuración para otro modelo de arduino, en `share/arduino/SConstruct`
 - Solo probado en GNU/Linux
 
