@@ -3,27 +3,22 @@ Arduino
 
 Arduino con filosofia unix. 
 
-- Portable a otros micros
+- Portable a otros microprocesadores.
 - Sin usar el IDE de arduino.
 - Sin usar java
 
 ## Instalación
 
-requiere pyserial, scons
-
-sudo ./instalar.sh
+`sudo ./instalar.sh`
 
 ## compilar y cargar al arduino
 
-<pre>
-scons --sconstruct=/usr/share/arduino/SConstruct
-scons --sconstruct=/usr/share/arduino/SConstruct upload
-</pre>
+`arduino upload`
 
 ## Nota
 
-- voy a simplicar este tutorial con un instalador :D
-- el ejemplo esta pensado para el `atmega328` hay que cambiar la configuración para otros micros.
+- El ejemplo esta pensado para el `atmega328` hay que cambiar la configuración para otro modelo de arduino, en `share/arduino/SConstruct`
+- Solo probado en GNU/Linux
 
 ## Fuente Bibliografica
 
