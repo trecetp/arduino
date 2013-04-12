@@ -89,6 +89,7 @@ def getUsbTty(rx):
 
 AVR_BIN_PREFIX = None
 AVRDUDE_CONF = None
+AVRDUDE_HOME = None
 
 if platform == 'darwin':
     # For MacOS X, pick up the AVR tools from within Arduino.app
@@ -112,6 +113,8 @@ else:
     ARDUINO_PORT        = resolve_var('ARDUINO_PORT', getUsbTty('/dev/ttyUSB*'))
     SKETCHBOOK_HOME     = resolve_var('SKETCHBOOK_HOME',
                                       path.expanduser('~/share/arduino/sketchbook/'))
+    AVRDUDE_HOME        = resolve_var('AVR_HOME',
+                                      path.join(ARDUINO_HOME, 'hardware/tools/'))
     AVR_HOME            = resolve_var('AVR_HOME',
                                       path.join(ARDUINO_HOME, 'hardware/tools/avr/bin'))
 
@@ -180,6 +183,9 @@ else:
 # Some OSs need bundle with IDE tool-chain
 if platform == 'darwin' or platform == 'win32':
     AVRDUDE_CONF = path.join(ARDUINO_HOME, 'hardware/tools/avr/etc/avrdude.conf')
+else:
+    AVRDUDE_CONF = path.join(ARDUINO_HOME, 'hardware/tools/avrdude.conf')
+
 
 AVR_BIN_PREFIX = path.join(AVR_HOME, 'avr-')
 
@@ -429,8 +435,13 @@ if UPLOAD_PROTOCOL == 'stk500':
 
 avrdudeOpts = ['-V', '-F', '-c %s' % UPLOAD_PROTOCOL, '-b %s' % UPLOAD_SPEED,
                '-p %s' % MCU, '-P %s' % ARDUINO_PORT, '-U flash:w:$SOURCES']
+
+if AVRDUDE_HOME:
+    AVR_BIN_PREFIX = AVRDUDE_HOME
+
 if AVRDUDE_CONF:
     avrdudeOpts.append('-C %s' % AVRDUDE_CONF)
+
 
 fuse_cmd = '%s %s' % (path.join(path.dirname(AVR_BIN_PREFIX), 'avrdude'),
                       ' '.join(avrdudeOpts))
