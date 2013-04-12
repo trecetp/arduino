@@ -4,3 +4,6 @@
 [submodule "arduino-mode"]
 	path = arduino-mode
 	url = https://github.com/bookest/arduino-mode
+[submodule "vim-arduino"]
+	path = vim-arduino
+	url = https://github.com/smerrill/vim-arduino
