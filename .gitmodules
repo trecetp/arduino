@@ -1,0 +1,3 @@
+[submodule "GtkSourceView-Arduino"]
+	path = GtkSourceView-Arduino
+	url = https://github.com/antoineleclair/GtkSourceView-Arduino
