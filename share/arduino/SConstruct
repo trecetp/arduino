@@ -112,7 +112,8 @@ else:
     ARDUINO_PORT        = resolve_var('ARDUINO_PORT', getUsbTty('/dev/ttyUSB*'))
     SKETCHBOOK_HOME     = resolve_var('SKETCHBOOK_HOME',
                                       path.expanduser('~/share/arduino/sketchbook/'))
-    AVR_HOME            = resolve_var('AVR_HOME', '')
+    AVR_HOME            = resolve_var('AVR_HOME',
+                                      path.join(ARDUINO_HOME, 'hardware/tools/avr/bin'))
 
 
 ARDUINO_BOARD   = resolve_var('ARDUINO_BOARD', 'atmega328')
