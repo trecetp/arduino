@@ -1,9 +1,9 @@
 [submodule "GtkSourceView-Arduino"]
-	path = sintaxis/GtkSourceView-Arduino
+	path = GtkSourceView-Arduino
 	url = https://github.com/antoineleclair/GtkSourceView-Arduino
 [submodule "arduino-mode"]
-	path = sintaxis/arduino-mode
+	path = arduino-mode
 	url = https://github.com/bookest/arduino-mode
 [submodule "vim-arduino"]
-	path = sintaxis/vim-arduino
+	path = sintasis/vim-arduino
 	url = https://github.com/smerrill/vim-arduino
