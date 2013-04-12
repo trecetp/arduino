@@ -11,9 +11,14 @@ Arduino con filosofia unix.
 
 `sudo ./instalar.sh`
 
-## compilar y cargar al arduino
+## Ejemplo
+compilar y cargar al arduino
 
-`arduino upload`
+<pre>
+cd arscons
+arduino upload
+</pre>
+
 
 ## Nota
 
