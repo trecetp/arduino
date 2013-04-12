@@ -1,30 +1,41 @@
-# Arscons : scons script for Arduino
+Arduino
+=======
 
-build & upload Arduino sketch on the command line with scons!
+Arduino con filosofia unix. 
 
-- No java needed!
-- Use Arduino IDE's conf. so, all board which supported by Arduino supported by arscons.
-- Works on Ubuntu Linux, Mac OS X and Windows.
-- Need pyserial to triggering reset just before upload.
+- Portable a otros micros
+- Sin usar el IDE de arduino.
+- Sin usar java
 
-## Basic Usage:
+## Instalación
 
-- make a folder which have same name of the sketch (ex. Blink/ for Blink.pde)
-- put the sketch and the SConstruct under the folder.
-- to make the HEX do following in the folder:
+requiere pyserial, scons
 
-    $ scons
+`aptitude install scons python-serial`
 
-- to upload the binary, do following in the folder:
+### Copiar los archivos compartidos de arduino
 
-    $ scons upload
+<pre>
+sudo mkdir -p /usr/share/arduino
+cd /usr/share/arduino
+wget http://arduino.googlecode.com/files/arduino-1.0.4-linux32.tgz -O - | tar -zxf -
+wget https://raw.github.com/b4zz4/arscons/master/SConstruct
+mv arduino-1.0.4/* ..
+rm -r arduino-1.0.4
+</pre>
 
-- refer [Expert Usage](arscons/wiki/Expert-Usage) for change the confs.
-- refer [Arscons Users](arscons/wiki/Arscons-Users) for arscons in practice (and hacks!)
+## compilar y cargar al arduino
 
+<pre>
+scons --sconstruct=usr/share/arduino/SConstruct
+scons --sconstruct=usr/share/arduino/SConstruct upload
+</pre>
 
-## Thanks to:
+## Nota
 
-- Ovidiu Predescu <ovidiu@gmail.com> and Lee Pike <leepike@gmail.com> for Mac port and bugfix.
-- Steven Ashley <steven@ashley.net.nz> for Windows port.
-- Kyle Gordon for many patches which including Arduino-1 support
+- voy a simplicar este tutorial con un instalador :D
+- el ejemplo esta pensado para el atmega328 hay que cambiar la configuración para otros micros.
+
+## Fuente Bibliografica
+
+- http://syvic.synusia.es/node/7
