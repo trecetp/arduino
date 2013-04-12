@@ -35,22 +35,21 @@ arduino upload
 
 Luego poner en la terminar de GNU/Linux
 
-stty -F /dev/ttyUSB0 raw speed 9600
+`stty -F /dev/ttyUSB0 raw speed 9600`
 
 ### Recibir mensajes
 
-cat /dev/ttyUSB0
+`cat /dev/ttyUSB0`
 
 ### Enviar mensajes
 
-echo "hello world" > /dev/ttyUSB0
+`echo "hello world" > /dev/ttyUSB0`
 
 ## Nota
 
 - Faltan archivos par colorear textos en vim, nano, gedit, etc
 - El ejemplo esta pensado para el `atmega328` hay que cambiar la configuración para otro modelo de arduino, en `share/arduino/SConstruct`
 - Solo probado en GNU/Linux
-
 
 ## Fuente Bibliografica
 
