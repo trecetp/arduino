@@ -11,18 +11,7 @@ Arduino con filosofia unix.
 
 requiere pyserial, scons
 
-`aptitude install scons python-serial`
-
-### Copiar los archivos compartidos de arduino
-
-<pre>
-sudo mkdir -p /usr/share/arduino
-cd /usr/share/arduino
-wget http://arduino.googlecode.com/files/arduino-1.0.4-linux32.tgz -O - | tar -zxf -
-wget https://raw.github.com/b4zz4/arduino/master/SConstruct
-mv arduino-1.0.4/* ..
-rm -r arduino-1.0.4
-</pre>
+sudo ./instalar.sh
 
 ## compilar y cargar al arduino
 
