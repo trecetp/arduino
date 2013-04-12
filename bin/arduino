@@ -1,0 +1,5 @@
+#!/bin/sh
+
+rm -r build
+scons --sconstruct=/usr/share/arduino/SConstruct $*
+

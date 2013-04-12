@@ -1,4 +1,5 @@
 #!/bin/sh
 
 aptitude install scons python-serial
-mv arduino /usr/share/arduino
+cp -r share/arduino /usr/share/arduino
+cp bin/arduino /usr/bin/
