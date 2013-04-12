@@ -29,7 +29,7 @@ arduino upload
 ### Serial
 
 <pre>
-cd share/arduino/AnalogReadSerial
+cd share/examples/01.Basics/AnalogReadSerial
 arduino upload
 </pre>
 
