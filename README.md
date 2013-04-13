@@ -50,7 +50,7 @@ actualmente estan incluidas las sintaxis para emacs, gedit y vim, faltan para na
 
 ## TVout y Hackvision
 
-!http://farm5.static.flickr.com/4087/5225072558_5f5f760037.jpg!
+![Conexiones](http://farm5.static.flickr.com/4087/5225072558_5f5f760037.jpg)
 
 <pre>
 cd hackvision
