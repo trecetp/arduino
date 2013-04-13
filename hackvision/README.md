@@ -25,6 +25,14 @@ hackvision/examples/TVout/DemoPAL/
 arduino upload
 </pre>
 
+### image2tvout
+
+<pre>
+image2tvout lacapi.png
+</pre>
+
+Este crea dos archivos lacapi.h y lacapi.cpp que al compilarlos son visibles en la tv
+
 ### Conectar el nunchuku
 
 Para manejar la mayoria de los juegos se puede usar un nunchuku
