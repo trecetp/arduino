@@ -52,6 +52,11 @@ actualmente están incluidas las sintaxis para emacs, gedit y vim, faltan para n
 
 ![Conexiones](http://farm5.static.flickr.com/4087/5225072558_5f5f760037.jpg)
 
+MCU		|Sync	|Video		|Audio
+m168,m328	|9	|7		|11
+m1280,m2560	|11	|A7(D29)	|10
+m644,m1284p	|13	|A7(D24)	|8
+
 <pre>
 cd hackvision
 sudo ./instalar.sh
