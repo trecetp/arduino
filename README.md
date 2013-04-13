@@ -38,7 +38,6 @@ Luego poner en la terminar de GNU/Linux
 ### Recibir mensajes
 
 `cat /dev/ttyUSB0`
-
 ### Enviar mensajes
 
 `echo "hello world" > /dev/ttyUSB0`
@@ -58,6 +57,14 @@ cd hackvision
 sudo ./instalar.sh
 </pre>
 
+### Conectar el nunchuku
+
+Para manejar la mayoria de los juegos se puede usar un nunchuku
+
+![Nunchuku](http://electronicavm.files.wordpress.com/2012/03/nunchuck_plug1.jpg?w=400)
+
+Data y Clock van al A4 y A5, GND y 3.3V a las patas del arduino con estas caracteristicas
+
 ## Nota
 
 - El ejemplo esta pensado para el `atmega328` hay que cambiar la configuración para otro modelo de arduino, en `share/arduino/SConstruct`
@@ -69,3 +76,4 @@ sudo ./instalar.sh
 - http://blog.nemik.net/2011/12/arduino-openwrt-art/
 - http://code.google.com/p/arduino-tvout/
 - http://nootropicdesign.com/hackvision/games.html
+- http://electronicavm.wordpress.com/2012/03/29/wii-nunchuk-arduino/
