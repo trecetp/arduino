@@ -1,0 +1,46 @@
+#!/bin/sh
+#
+#	image2tvout - Ernesto Bazzano bazza@riseup.net
+#	(c) Liberado bajo licencia AGPL [https://www.gnu.org/licenses/agpl]
+#	Convierte imagenes en codigo de C
+#	pensado para TVout de arduino http://code.google.com/p/arduino-tvout/
+#
+#	requiere: convert (imagickmagic)
+
+if [ ! "$(convert)" ]; then
+	echo "¡necesitas instalar imagemagick!"
+	exit
+fi
+if [ ! "$*" ]; then
+	echo "  image2tvout imagen.png"
+	exit
+fi
+
+NOMBRE="$( echo $*  | sed -e 's@.*/@@g' -e 's@\.[^.]*$@@g')_$2"
+ASCII=$(convert "$1" -threshold $2%  -colors 2  xpm:- | grep -v "#" | grep '"')
+
+echo "#include \"$NOMBRE.h\"" > $NOMBRE.cpp
+echo "PROGMEM prog_uchar $NOMBRE[] = {" >> $NOMBRE.cpp
+
+#tamaño
+echo $ASCII | head -n 1 | sed 's/"//g' | cut -d" " -f1-2 | sed 's/\ /,/g' >> $NOMBRE.cpp
+echo "," >> $NOMBRE.cpp
+
+#imagen en 0 y 1
+echo "$ASCII" | sed '1d; y/\.\ /10/; s/\"//g; s/\t//g; s/,//g; s/\(........\)/0b\1,/g;' >> $NOMBRE.cpp
+echo "};" >> $NOMBRE.cpp
+
+echo "#include <avr/pgmspace.h>
+#ifndef ${NOMBRE}_H
+#define ${NOMBRE}_H
+
+extern prog_uchar $NOMBRE[];
+#endif" > $NOMBRE.h
+
+exit
+
+	Quehaceres:
+
+		- hacer version con escala de grises usando efecto opticos
+		- simplificar el programa
+
