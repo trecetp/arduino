@@ -1,10 +1,9 @@
-Arduino
-=======
-con filosofia unix
+Arduino (con filosofia unix)
+============================
 
-- Portable a otros microprocesadores.
 - Sin usar el IDE de arduino.
-- Sin usar java
+- Sin usar java.
+- Portable a otros microprocesadores.
 
 ## Instalación
 
@@ -68,3 +67,5 @@ sudo ./instalar.sh
 
 - http://syvic.synusia.es/node/7
 - http://blog.nemik.net/2011/12/arduino-openwrt-art/
+- http://code.google.com/p/arduino-tvout/
+- http://nootropicdesign.com/hackvision/games.html
