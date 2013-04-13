@@ -3,10 +3,15 @@
 #include "stc.h"
 #include "platform.h"
 #include "bitmaps.h"
+#include "tones.h"
+#include <avr/pgmspace.h>
 
-//#define HACKVISION  //compile this for a hackvision
-#define VGS_CC  //compile this for a video game shield with a classic controller
-                //on p1
+#include <i2cmaster.h>
+
+//#define HACKVISION  // compile this for a hackvision
+//#define VGS_CC  // compile this for a video game shield with a Wii classic controller on P1
+#define VGS_NUNCHUCK // compile this for a video game shield with a Wii nunchuck controller on P1
+
 //#define DISABLE_INTRO
 
 #ifdef HACKVISION
@@ -18,6 +23,12 @@
 #include <ClassicController.h>
 ClassicController cc;
 #define STARTMSG "Press Start"
+#endif
+
+#ifdef VGS_NUNCHUCK
+#include <nunchuck.h>
+Nunchuck n;
+#define STARTMSG "Press C"
 #endif
 
 //BOARD_X and NXT_X must be divisable by 8!!!!!!!!
@@ -44,7 +55,7 @@ void setCell(char x, char y,char bx, char by, char c, char f);
 void setup() {
   int error;
 
-  TV.begin(PAL,W,H);
+  TV.begin(_NTSC,W,H);
   TV.select_font(font6x8);
 #ifdef VGS_CC
   if (cc.begin(WII_PLAYER_1)) {
@@ -52,6 +63,11 @@ void setup() {
     while(1);
   }
   //ccpoll = 0;
+#elif defined(VGS_NUNCHUCK)
+  if (n.begin(NUNCHUCK_PLAYER_1)) {
+    TV.print("Nunchuck begin error");
+    while(1);
+  }
 #endif
 #ifndef DISABLE_INTRO
   intro();
@@ -62,6 +78,10 @@ void setup() {
   TV.select_font(font6x8);
   TV.delay(500);
   TV.printPGM(25,60,PSTR(STARTMSG));
+  
+
+  
+
 #ifdef HACKVISION
   TV.printPGM(0,H-16,PSTR("To pause, press"));
   TV.printPGM(0,H-8,PSTR("< & > together"));
@@ -80,6 +100,13 @@ void setup() {
       while (cc.button_plus_start())
         cc.update();
       break;
+    }
+#elif defined(VGS_NUNCHUCK)
+    n.update();
+    if (n.button_c()) {
+         while (n.button_c())
+           n.update();
+         break;
     }
 #endif
   }
@@ -113,6 +140,10 @@ unsigned char w,l,wb;
     cc.update();
     if (cc.button_plus_start())
       return;
+#elif defined(VGS_Nunchuck)
+    n.update();
+    if (n.button_c())
+      return;
 #endif
   }
   for (unsigned char i = 0; i < (TV.vres() - l)/2; i++) {
@@ -125,6 +156,10 @@ unsigned char w,l,wb;
     cc.update();
     if (cc.button_plus_start())
       return;
+#elif defined(VGS_NUNCHUCK)
+    n.update();
+    if (n.button_c())
+      return;
 #endif
   }
   int time = TV.millis() + 2000;
@@ -135,6 +170,10 @@ unsigned char w,l,wb;
 #elif defined(VGS_CC)
     cc.update();
     if (cc.button_plus_start())
+      return;
+#elif defined(VGS_NUNCHUCK)
+    n.update();
+    if (n.button_c())
       return;
 #endif
   }
@@ -364,9 +403,102 @@ void platformReadInput(StcGame *gameInstance){
     gameOnKeyUp(&game, EVENT_MOVE_DOWN);
     prev &= ~DOWNBIT;
   }
+#elif defined(VGS_NUNCHUCK)
+#define LEFTBIT 1
+#define RIGHTBIT 2
+#define UPBIT 4
+#define DOWNBIT 8
+#define ABIT 16
+#define STARTBIT 32
+#define SELECTBIT 64
+
+#define PLEFT (prev &LEFTBIT)
+#define PRIGHT (prev & RIGHTBIT)
+#define PDOWN (prev &DOWNBIT)
+#define PUP (prev & UPBIT)
+#define PA (prev & ABIT)
+#define PSTART (prev & STARTBIT)
+#define PSELECT (prev & SELECTBIT)
+
+  n.update();
+  
+  if (n.joy_up()) {
+    if (!PUP) {
+      gameOnKeyDown(&game, EVENT_ROTATE_CW);
+      prev |= UPBIT;
+    }
+  }
+  else if (PUP){
+    prev &= ~UPBIT;
+  }
+  
+  if (n.button_c()) {
+    if (!PSTART) {
+      gameOnKeyDown(&game, EVENT_PAUSE);
+      prev |= STARTBIT;
+    }
+  }
+  else if (PSTART){
+    prev &= ~STARTBIT;
+  }
+
+  if (n.button_c()) {
+    if (!PSELECT) {
+      gameOnKeyDown(&game, EVENT_RESTART);
+      prev |= SELECTBIT;
+    }
+  }
+  else if (PSELECT){
+    prev &= ~SELECTBIT;
+  }
+  
+  if (n.button_z()) {
+    if (!PA) {
+      gameOnKeyDown(&game, EVENT_DROP);
+      prev |= ABIT;
+    }
+  }
+  else if (PA) {
+    prev &= ~ABIT;
+  }
+  
+  if (n.joy_left()) {
+    if (!PLEFT) {
+      gameOnKeyDown(&game, EVENT_MOVE_LEFT);
+      prev |= LEFTBIT;
+    }
+  }
+  else if (PLEFT) {
+    gameOnKeyUp(&game, EVENT_MOVE_LEFT);
+    prev &= ~LEFTBIT;
+  }
+  
+  if (n.joy_right()) {
+    if (!PRIGHT) {
+      gameOnKeyDown(&game, EVENT_MOVE_RIGHT);
+      prev |= RIGHTBIT;
+    }
+  }
+  else if (PRIGHT) {
+    gameOnKeyUp(&game, EVENT_MOVE_RIGHT);
+    prev &= ~RIGHTBIT;
+  }
+  
+  if (n.joy_down()) {
+    if (!PDOWN) {
+      gameOnKeyDown(&game, EVENT_MOVE_DOWN);
+      prev |= DOWNBIT;
+    }
+  }
+  else if (PDOWN) {
+    gameOnKeyUp(&game, EVENT_MOVE_DOWN);
+    prev &= ~DOWNBIT;
+  }
 #endif
 
 }
+
+  
 
 void setCell(char x, char y,char bx, char by, char c, char f) {
   int index = bx/8 + x/2 + by*W/8 + y*4*W/8;
@@ -422,6 +554,32 @@ void setCell(char x, char y,char bx, char by, char c, char f) {
   }
 }
 
+void update_music()
+{
+  static unsigned char current_note = 0;
+  static long next_note_start_time = 0;
+  if (TV.millis() >= next_note_start_time)
+  {
+    if (current_note == SONG_LENGTH)
+    {
+       //it's the end of the song!
+       current_note = 0;    
+    }
+    
+      int note_duration = (pgm_read_word_near(duration_t1_c1 + current_note)/16)*5;
+      next_note_start_time = TV.millis()+note_duration+PAUSE_BETWEEN_NOTES;
+      TV.tone(pgm_read_word_near(melody_t1_c1 + current_note), note_duration); 
+    if (current_note == SONG_LENGTH-1)
+    {
+      next_note_start_time += PAUSE_BETWEEN_SONGS;
+      next_note_start_time -= PAUSE_BETWEEN_NOTES;
+    }
+    current_note++;
+    
+  }
+}
+
+
 //modify this to render the game TVout redering is defined here.
 void platformRenderGame(StcGame *gameInstance) {
   char i,j;
@@ -437,6 +595,7 @@ if (!game.isPaused && !game.isOver) {
 #endif
       }
     }
+    update_music();
   
 #ifdef STC_SHOW_GHOST_PIECE
     for (i = 0; i < TETROMINO_SIZE; i++) {
@@ -473,8 +632,8 @@ if (!game.isPaused && !game.isOver) {
   if (game.isPaused)
     TV.printPGM(BOARD_X+4,BOARD_Y+40,PSTR("Pause"));
   if (game.isOver) {
-    TV.printPGM(BOARD_X+8,BOARD_Y+36,PSTR("Game"));
-    TV.printPGM(BOARD_X+8,BOARD_Y+44,PSTR("Over"));
+    TV.printPGM(BOARD_X+7,BOARD_Y+36,PSTR("Game"));
+    TV.printPGM(BOARD_X+7,BOARD_Y+44,PSTR("Over"));
     restarted = 1;
   }
   
@@ -484,6 +643,7 @@ if (!game.isPaused && !game.isOver) {
   }
   
   game.stateChanged = 0;
+ 
 }
 
 //return millis for this since this uses TVout we need to return TVouts version of millis.
