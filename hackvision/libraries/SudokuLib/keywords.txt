@@ -1,0 +1,2 @@
+SUDOKU	KEYWORD1
+generate	KEYWORD2

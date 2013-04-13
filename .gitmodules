@@ -7,3 +7,6 @@
 [submodule "vim-arduino"]
 	path = sintaxis/vim-arduino
 	url = https://github.com/smerrill/vim-arduino
+[submodule "hackvision/examples/worm"]
+	path = hackvision/examples/worm
+	url = https://github.com/MarioBoehmer/ArduinoWorm
