@@ -50,6 +50,14 @@ actualmente están incluidas las sintaxis para emacs, gedit y vim, faltan para n
 
 [Juegos](http://nootropicdesign.com/hackvision/games.html) y [salida de television](http://code.google.com/p/arduino-tvout/) para arduino.
 
+### Instalación
+<pre>
+cd hackvision
+sudo ./instalar.sh
+</pre>
+
+### Conexiones
+
 ![Conexiones](http://farm5.static.flickr.com/4087/5225072558_5f5f760037.jpg)
 
 Dependiendo del micro las patas para el sincronismo, video y audio respectivamente
@@ -58,9 +66,11 @@ Dependiendo del micro las patas para el sincronismo, video y audio respectivamen
 * **m1280,m2560** 11, A7(D29), 10
 * **m644,m1284p** 13, A7(D24), 8
 
+### Ejemplo
+
 <pre>
-cd hackvision
-sudo ./instalar.sh
+hackvision/examples/TVout/DemoPAL/
+arduino upload
 </pre>
 
 ### Conectar el nunchuku
