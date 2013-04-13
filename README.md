@@ -48,6 +48,15 @@ Luego poner en la terminar de GNU/Linux
 
 actualmente estan incluidas las sintaxis para emacs, gedit y vim, faltan para nano
 
+## TVout y Hackvision
+
+!http://farm5.static.flickr.com/4087/5225072558_5f5f760037.jpg!
+
+<pre>
+cd hackvision
+sudo ./instalar.sh
+</pre>
+
 ## Nota
 
 - El ejemplo esta pensado para el `atmega328` hay que cambiar la configuración para otro modelo de arduino, en `share/arduino/SConstruct`
