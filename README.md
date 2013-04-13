@@ -1,4 +1,4 @@
-Arduino (con filosofia unix)
+Arduino (con filosofía Unix)
 ============================
 
 - Sin usar el IDE de arduino.
@@ -17,7 +17,7 @@ arduino upload
 </pre>
 
 ## Ejemplos
-Leer, cada archivo para ver como hay que conectar los led y sensores
+Leer cada archivo para ver como hay que conectar los led y sensores
 
 <pre>
 cd share/arduino/examples/01.Basics/Blink/
@@ -45,7 +45,7 @@ Luego poner en la terminar de GNU/Linux
 
 ## Sintaxis
 
-actualmente estan incluidas las sintaxis para emacs, gedit y vim, faltan para nano
+actualmente están incluidas las sintaxis para emacs, gedit y vim, faltan para nano
 
 ## TVout y Hackvision
 
@@ -63,7 +63,7 @@ sudo ./instalar.sh
 - El ejemplo esta pensado para el `atmega328` hay que cambiar la configuración para otro modelo de arduino, en `share/arduino/SConstruct`
 - Solo probado en GNU/Linux
 
-## Fuente Bibliografica
+## Fuente Bibliográfica
 
 - http://syvic.synusia.es/node/7
 - http://blog.nemik.net/2011/12/arduino-openwrt-art/
