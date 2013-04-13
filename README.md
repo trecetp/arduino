@@ -16,7 +16,7 @@ cd Proyecto
 arduino upload
 </pre>
 
-## Ejemplos
+### Ejemplos
 Leer cada archivo para ver como hay que conectar los led y sensores
 
 <pre>
@@ -44,9 +44,9 @@ Luego poner en la terminar de GNU/Linux
 
 ## Sintaxis
 
-actualmente están incluidas las sintaxis para emacs, gedit y vim, faltan para nano
+actualmente están incluidas las sintaxis para emacs, gedit, vim y otros. Faltan para nano
 
-## TVout y Hackvision
+# TVout y Hackvision
 
 [Juegos](http://nootropicdesign.com/hackvision/games.html) y [salida de television](http://code.google.com/p/arduino-tvout/) para arduino.
 
