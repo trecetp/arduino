@@ -27,6 +27,9 @@ arduino upload
 
 ### image2tvout
 
+Con este programa podes convertir cualquier imagen a imagenes que pueden ser vistas en la TV
+
+
 <pre>
 cd hackvision/examples/image2tvout/lacapi
 image2tvout lacapi.png
