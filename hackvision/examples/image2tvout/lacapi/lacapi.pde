@@ -4,7 +4,7 @@
 TVout TV;
 
 void setup() {
-  TV.begin(PAL,120,96);
+  TV.begin(NTSC,120,96);
   TV.bitmap(10,0,lacapi);
 }
 
