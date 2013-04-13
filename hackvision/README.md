@@ -28,10 +28,12 @@ arduino upload
 ### image2tvout
 
 <pre>
+cd hackvision/examples/image2tvout/lacapi
 image2tvout lacapi.png
+arduino upload
 </pre>
 
-Este crea dos archivos lacapi.h y lacapi.cpp que al compilarlos son visibles en la tv
+Este crea dos archivos lacapi.h y lacapi.cpp que al compilarlos son visibles en la tv :D
 
 ### Conectar el nunchuku
 
