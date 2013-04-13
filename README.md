@@ -1,7 +1,6 @@
 Arduino
 =======
-
-Arduino con filosofia unix. 
+con filosofia unix
 
 - Portable a otros microprocesadores.
 - Sin usar el IDE de arduino.

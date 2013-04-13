@@ -114,7 +114,7 @@ else:
                                       path.expanduser('~/share/arduino/sketchbook/'))
     AVR_HOME            = resolve_var('AVR_HOME',
                                       path.join(ARDUINO_HOME, 'hardware/tools/avr/bin'))
-    LINUX		= "si"
+    LINUX    		= "si"
 
 ARDUINO_BOARD   = resolve_var('ARDUINO_BOARD', 'atmega328')
 ARDUINO_VER     = resolve_var('ARDUINO_VER', 0) # Default to 0 if nothing is specified
