@@ -77,3 +77,4 @@ Data y Clock van al A4 y A5, GND y 3.3V a las patas del arduino con estas caract
 - http://code.google.com/p/arduino-tvout/
 - http://nootropicdesign.com/hackvision/games.html
 - http://electronicavm.wordpress.com/2012/03/29/wii-nunchuk-arduino/
+- http://www.wayneandlayne.com/projects/video-game-shield/download/
