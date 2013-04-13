@@ -6,7 +6,7 @@
   <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# githubog: http://ogp.me/ns/fb/githubog#">
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>arduino/hackvision/conexiones/nunchuku.png at master · b4zz4/arduino · GitHub</title>
+        <title>arduino/hackvision/conexiones/conexiones.png at master · b4zz4/arduino · GitHub</title>
     <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub" />
     <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub" />
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-114.png" />
@@ -23,7 +23,7 @@
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
     <meta content="authenticity_token" name="csrf-param" />
-<meta content="5dQv33OgYYHkcj8m/WMScrm5BOXfP5MNpCo3HGEaha0=" name="csrf-token" />
+<meta content="qtoZzKs7EximuRq4Wyf/R49jtFarO6L/zruqGpOudYM=" name="csrf-token" />
 
     <link href="https://a248.e.akamai.net/assets.github.com/assets/github-9a310fdbdbb761f960d24b9c185a3506b9d3663d.css" media="all" rel="stylesheet" type="text/css" />
     <link href="https://a248.e.akamai.net/assets.github.com/assets/github2-3f38effb52355c191d32c7d619457584b9f50394.css" media="all" rel="stylesheet" type="text/css" />
@@ -35,7 +35,7 @@
       
       <meta http-equiv="x-pjax-version" content="bd53d3113f88381993a09fcbb0118740">
 
-        <link data-pjax-transient rel='permalink' href='/b4zz4/arduino/blob/f0704bddeb27d56279204ae0d317bc4b03d17144/hackvision/conexiones/nunchuku.png'>
+        <link data-pjax-transient rel='permalink' href='/b4zz4/arduino/blob/f0704bddeb27d56279204ae0d317bc4b03d17144/hackvision/conexiones/conexiones.png'>
     <meta property="og:title" content="arduino"/>
     <meta property="og:type" content="githubog:gitrepository"/>
     <meta property="og:url" content="https://github.com/b4zz4/arduino"/>
@@ -77,7 +77,7 @@
 
     <div class="header-actions">
         <a class="button primary" href="https://github.com/signup">Sign up for free</a>
-      <a class="button" href="https://github.com/login?return_to=%2Fb4zz4%2Farduino%2Fblob%2Fmaster%2Fhackvision%2Fconexiones%2Fnunchuku.png">Sign in</a>
+      <a class="button" href="https://github.com/login?return_to=%2Fb4zz4%2Farduino%2Fblob%2Fmaster%2Fhackvision%2Fconexiones%2Fconexiones.png">Sign in</a>
     </div>
 
   </div>
@@ -201,11 +201,11 @@
 
                 <div class="select-menu-item js-navigation-item js-navigation-target selected">
                   <span class="select-menu-item-icon mini-icon mini-icon-confirm"></span>
-                  <a href="/b4zz4/arduino/blob/master/hackvision/conexiones/nunchuku.png" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="master" rel="nofollow" title="master">master</a>
+                  <a href="/b4zz4/arduino/blob/master/hackvision/conexiones/conexiones.png" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="master" rel="nofollow" title="master">master</a>
                 </div> <!-- /.select-menu-item -->
                 <div class="select-menu-item js-navigation-item js-navigation-target ">
                   <span class="select-menu-item-icon mini-icon mini-icon-confirm"></span>
-                  <a href="/b4zz4/arduino/blob/patch-1/hackvision/conexiones/nunchuku.png" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="patch-1" rel="nofollow" title="patch-1">patch-1</a>
+                  <a href="/b4zz4/arduino/blob/patch-1/hackvision/conexiones/conexiones.png" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="patch-1" rel="nofollow" title="patch-1">patch-1</a>
                 </div> <!-- /.select-menu-item -->
             </div>
 
@@ -218,7 +218,7 @@
 
                 <div class="select-menu-item js-navigation-item js-navigation-target ">
                   <span class="select-menu-item-icon mini-icon mini-icon-confirm"></span>
-                  <a href="/b4zz4/arduino/blob/v1.0.0/hackvision/conexiones/nunchuku.png" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="v1.0.0" rel="nofollow" title="v1.0.0">v1.0.0</a>
+                  <a href="/b4zz4/arduino/blob/v1.0.0/hackvision/conexiones/conexiones.png" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="v1.0.0" rel="nofollow" title="v1.0.0">v1.0.0</a>
                 </div> <!-- /.select-menu-item -->
             </div>
 
@@ -253,8 +253,8 @@
           
 
 
-<!-- blob contrib key: blob_contributors:v21:8720143680b33b52f54c21b3ce7cc1f6 -->
-<!-- blob contrib frag key: views10/v8/blob_contributors:v21:8720143680b33b52f54c21b3ce7cc1f6 -->
+<!-- blob contrib key: blob_contributors:v21:876a14a14b3f2649bbbe388134c6252a -->
+<!-- blob contrib frag key: views10/v8/blob_contributors:v21:876a14a14b3f2649bbbe388134c6252a -->
 
 
 <div id="slider">
@@ -263,17 +263,17 @@
       <p title="This is a placeholder element" class="js-history-link-replace hidden"></p>
 
         <div class="breadcrumb">
-          <span class='bold'><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/b4zz4/arduino" class="js-slide-to" data-branch="master" data-direction="back" itemscope="url"><span itemprop="title">arduino</span></a></span></span><span class="separator"> / </span><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/b4zz4/arduino/tree/master/hackvision" class="js-slide-to" data-branch="master" data-direction="back" itemscope="url"><span itemprop="title">hackvision</span></a></span><span class="separator"> / </span><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/b4zz4/arduino/tree/master/hackvision/conexiones" class="js-slide-to" data-branch="master" data-direction="back" itemscope="url"><span itemprop="title">conexiones</span></a></span><span class="separator"> / </span><strong class="final-path">nunchuku.png</strong> <span class="js-zeroclipboard zeroclipboard-button" data-clipboard-text="hackvision/conexiones/nunchuku.png" data-copied-hint="copied!" title="copy to clipboard"><span class="mini-icon mini-icon-clipboard"></span></span>
+          <span class='bold'><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/b4zz4/arduino" class="js-slide-to" data-branch="master" data-direction="back" itemscope="url"><span itemprop="title">arduino</span></a></span></span><span class="separator"> / </span><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/b4zz4/arduino/tree/master/hackvision" class="js-slide-to" data-branch="master" data-direction="back" itemscope="url"><span itemprop="title">hackvision</span></a></span><span class="separator"> / </span><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/b4zz4/arduino/tree/master/hackvision/conexiones" class="js-slide-to" data-branch="master" data-direction="back" itemscope="url"><span itemprop="title">conexiones</span></a></span><span class="separator"> / </span><strong class="final-path">conexiones.png</strong> <span class="js-zeroclipboard zeroclipboard-button" data-clipboard-text="hackvision/conexiones/conexiones.png" data-copied-hint="copied!" title="copy to clipboard"><span class="mini-icon mini-icon-clipboard"></span></span>
         </div>
 
       <a href="/b4zz4/arduino/find/master" class="js-slide-to" data-hotkey="t" style="display:none">Show File Finder</a>
 
 
-        <div class="commit commit-loader file-history-tease js-deferred-content" data-url="/b4zz4/arduino/contributors/master/hackvision/conexiones/nunchuku.png">
+        <div class="commit commit-loader file-history-tease js-deferred-content" data-url="/b4zz4/arduino/contributors/master/hackvision/conexiones/conexiones.png">
           Fetching contributors…
 
           <div class="participation">
-            <p class="loader-loading"><img alt="Octocat-spinner-32-eaf2f5" height="16" src="https://a248.e.akamai.net/assets.github.com/images/spinners/octocat-spinner-32-EAF2F5.gif?1360648843" width="16" /></p>
+            <p class="loader-loading"><img alt="Octocat-spinner-32-eaf2f5" height="16" src="https://a248.e.akamai.net/assets.github.com/images/spinners/octocat-spinner-32-EAF2F5.gif?1340659561" width="16" /></p>
             <p class="loader-error">Cannot retrieve contributors at this time</p>
           </div>
         </div>
@@ -281,7 +281,7 @@
     </div><!-- ./.frame-meta -->
 
     <div class="frames">
-      <div class="frame" data-permalink-url="/b4zz4/arduino/blob/f0704bddeb27d56279204ae0d317bc4b03d17144/hackvision/conexiones/nunchuku.png" data-title="arduino/hackvision/conexiones/nunchuku.png at master · b4zz4/arduino · GitHub" data-type="blob">
+      <div class="frame" data-permalink-url="/b4zz4/arduino/blob/f0704bddeb27d56279204ae0d317bc4b03d17144/hackvision/conexiones/conexiones.png" data-title="arduino/hackvision/conexiones/conexiones.png at master · b4zz4/arduino · GitHub" data-type="blob">
 
         <div id="files" class="bubble">
           <div class="file">
@@ -289,19 +289,19 @@
               <div class="info">
                 <span class="icon"><b class="mini-icon mini-icon-text-file"></b></span>
                 <span class="mode" title="File Mode">file</span>
-                <span>12.746 kb</span>
+                <span>34.191 kb</span>
               </div>
               <div class="actions">
                 <div class="button-group">
-                  <a href="/b4zz4/arduino/raw/master/hackvision/conexiones/nunchuku.png" class="button minibutton " id="raw-url">Raw</a>
-                  <a href="/b4zz4/arduino/commits/master/hackvision/conexiones/nunchuku.png" class="button minibutton " rel="nofollow">History</a>
+                  <a href="/b4zz4/arduino/raw/master/hackvision/conexiones/conexiones.png" class="button minibutton " id="raw-url">Raw</a>
+                  <a href="/b4zz4/arduino/commits/master/hackvision/conexiones/conexiones.png" class="button minibutton " rel="nofollow">History</a>
                 </div><!-- /.button-group -->
               </div><!-- /.actions -->
 
             </div>
                 <div class="blob-wrapper data type-text js-blob-data">
       <div class="image js-image">
-          <span class="border-wrap"><img src="/b4zz4/arduino/blob/master/hackvision/conexiones/nunchuku.png?raw=true" /></span>
+          <span class="border-wrap"><img src="/b4zz4/arduino/blob/master/hackvision/conexiones/conexiones.png?raw=true" /></span>
       </div>
   </div>
 
@@ -324,7 +324,7 @@
 </div>
 
 <div id="js-frame-loading-template" class="frame frame-loading large-loading-area" style="display:none;">
-  <img class="js-frame-loading-spinner" src="https://a248.e.akamai.net/assets.github.com/images/spinners/octocat-spinner-128.gif?1360648843" height="64" width="64">
+  <img class="js-frame-loading-spinner" src="https://a248.e.akamai.net/assets.github.com/images/spinners/octocat-spinner-128.gif?1347543527" height="64" width="64">
 </div>
 
 
@@ -385,7 +385,7 @@
       <hr class="footer-divider">
 
 
-    <p class="right">&copy; 2013 <span title="0.06932s from fe3.rs.github.com">GitHub</span>, Inc. All rights reserved.</p>
+    <p class="right">&copy; 2013 <span title="0.04967s from fe18.rs.github.com">GitHub</span>, Inc. All rights reserved.</p>
     <a class="left" href="https://github.com/">
       <span class="mega-icon mega-icon-invertocat"></span>
     </a>
@@ -432,7 +432,7 @@
 
     
     
-    <span id='server_response_time' data-time='0.06965' data-host='fe3'></span>
+    <span id='server_response_time' data-time='0.05009' data-host='fe18'></span>
     
   </body>
 </html>
